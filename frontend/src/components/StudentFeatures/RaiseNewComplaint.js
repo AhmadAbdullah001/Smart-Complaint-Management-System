@@ -105,9 +105,9 @@ function RaiseComplaint() {
       return;
     }
     try {
-      const res=await RaiseComplain(title,category,description,img,sessionStorage.getItem('token'));
+      await RaiseComplain(title,category,description,img,sessionStorage.getItem('token'));
       // alert(res.message)
-      window.location.href="/studenthome"
+      window.location.href="/studenthome";
         } catch (error) {
       alert("Error submitting complaint: "+error.message)
     }

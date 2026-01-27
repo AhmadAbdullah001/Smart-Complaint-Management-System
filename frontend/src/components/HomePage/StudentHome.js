@@ -106,12 +106,14 @@ function StudentHome() {
         borderRadius: "8px",
         transition: "all 0.3s ease",
       }}
-      onMouseEnter={(e) =>
-        (e.currentTarget.style.backgroundColor = "#dc3545", e.currentTarget.style.color = "#fff")
-      }
-      onMouseLeave={(e) =>
-        (e.currentTarget.style.backgroundColor = "transparent", e.currentTarget.style.color = "#dc3545")
-      }
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = "#dc3545";
+        e.currentTarget.style.color = "#fff";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = "transparent";
+        e.currentTarget.style.color = "#dc3545";
+      }}
     >
       <i className="bi bi-box-arrow-right me-1"></i> Logout
     </button>
