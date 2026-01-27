@@ -39,7 +39,7 @@ function StudentHome() {
     };
 
     fetchDetails();
-  }, []);
+  }, [fetchUser, FetchComplains]);
 
   const Logout = () => {
     sessionStorage.removeItem("token");
@@ -171,8 +171,8 @@ function StudentHome() {
               label: "Urgent",
               value: urgent,
             },
-          ].map((card, index) => (
-            <div key={index} className="col-md-3">
+          ].map((card) => (
+            <div key={card.label} className="col-md-3">
               <div className="card shadow-sm border-0 text-center py-3">
                 <div className={`${card.color} fs-2 mb-2`}>
                   <i className={`bi ${card.icon}`}></i>

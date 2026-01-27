@@ -42,15 +42,15 @@ function MyComplaints() {
         <p className="no-complaints-text">No complaints found.</p>
       ) : (
         <div className="mycomplaints-grid">
-          {complaints.map((c, i) => (
-            <div key={i} className="mycomplaints-card">
+          {complaints.map((c) => (
+            <div key={c._id} className="mycomplaints-card">
               <h5 className="complaint-title">{c.title}</h5>
               <p className="complaint-category">
                 <strong>Category:</strong> {c.category}
               </p>
               <p className="complaint-desc">
                 {c.description.split("\n").map((line, idx) => (
-                  <span key={idx}>
+                  <span key={`${c._id}-${idx}`}>
                     {line}
                     <br />
                   </span>

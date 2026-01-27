@@ -36,7 +36,7 @@ function TeacherHome() {
     };
     if(details.category)
     loadComplaints();
-  }, [authToken,details]);
+  }, [authToken, details, CategoryComplains]);
   useEffect(()=>{
     const getuserdetails=async()=>{
           const temp= await fetchUser(authToken);
@@ -45,7 +45,7 @@ function TeacherHome() {
         }
         getuserdetails();
         // console.log("These are the ",details);
-  },[])
+  },[authToken, fetchUser])
   const filteredComplaints =
     selectedTab === "All"
       ? complaints
@@ -245,8 +245,8 @@ function TeacherHome() {
           {loading ? (
             <p className="text-center text-secondary">Loading complaints...</p>
           ) : filteredComplaints.length > 0 ? (
-            filteredComplaints.map((c, index) => (
-              <ComplaintList  key={index} {...c} />
+            filteredComplaints.map((c) => (
+              <ComplaintList  key={c._id} {...c} />
             ))
           ) : (
             renderEmptyState()
