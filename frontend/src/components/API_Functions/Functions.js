@@ -2,8 +2,9 @@ import React from "react";
 import FunctionContext from "./Context";
 
 function Functions(props) {
+  const backendURL="https://smart-complaint-management-system-jnq3.onrender.com/"
   const Signup = async (name, ID, password, role,category,email) => {
-    const res = await fetch("http://localhost:5000/api/auth/signup", {
+    const res = await fetch(`${backendURL}api/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, ID, password, role,category,email}),
@@ -17,7 +18,7 @@ function Functions(props) {
   };
 
   const Login = async (ID, password) => {
-    const res = await fetch("http://localhost:5000/api/auth/login", {
+    const res = await fetch(`${backendURL}api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" }, // ✅ fixed typo
       body: JSON.stringify({ ID, password }),
@@ -31,7 +32,7 @@ function Functions(props) {
   };
   const fetchUser = async (authToken) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/getuser`, {
+      const res = await fetch(`${backendURL}api/auth/getuser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +53,7 @@ function Functions(props) {
   };
   const fetchUserById = async (id, authToken) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/fetchuserwithid`, {
+      const res = await fetch(`${backendURL}api/auth/fetchuserwithid`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +82,7 @@ function Functions(props) {
   ) => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/complain/addcomplain",
+        `${backendURL}api/complain/addcomplain`,
         {
           method: "POST",
           headers: {
@@ -99,7 +100,7 @@ function Functions(props) {
   };
 
   const FetchComplains = async (id, authToken) => {
-    const res = await fetch("http://localhost:5000/api/complain/mycomplains", {
+    const res = await fetch(`${backendURL}api/complain/mycomplains`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +117,7 @@ function Functions(props) {
   };
 
   const CategoryComplains = async (category, authToken) => {
-    const res=await fetch("http://localhost:5000/api/complain/categorycomplains",{
+    const res=await fetch(`${backendURL}api/complain/categorycomplains`,{
       method:"POST",
       headers:{
         "Content-Type":"application/json",
@@ -136,7 +137,7 @@ function Functions(props) {
 
   const UpdateComplainStatus = async (id, status, authToken, resolution = "",complaintMail,complaint) => {
   const res = await fetch(
-    "http://localhost:5000/api/complain/updatecomplainstatus",
+    `${backendURL}api/complain/updatecomplainstatus`,
     {
       method: "POST",
       headers: {
