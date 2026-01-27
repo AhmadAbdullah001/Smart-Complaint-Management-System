@@ -1,0 +1,30 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.Leftbox
+{
+    /* border: solid red 1px; */
+    margin: 0;
+}
+.Bgimg
+{
+    /* border: solid red 1px; */
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+.Leftbox {
+  /* background: linear-gradient(135deg, #002366, #ff4500); */
+  background-image: url('../../../public/Bgimg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Leftbox h2 {
+  font-weight: bold;
+}

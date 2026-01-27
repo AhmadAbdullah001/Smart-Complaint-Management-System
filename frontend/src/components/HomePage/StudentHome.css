@@ -1,0 +1,29 @@
+body {
+  background-color: #f8f9fc !important;
+  overflow-x: hidden;
+}
+
+.card {
+  border-radius: 16px !important;
+}
+
+.btn-primary {
+  background: #6c63ff !important;
+  border: none !important;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+}
+
+.progress {
+  border-radius: 10px;
+}
+
+.navbar {
+  border-bottom: 2px solid #f1f1f1;
+}
+.ICON
+{
+      background: linear-gradient(90deg, #3b82f6, #a855f7); /* blue → purple */
+}

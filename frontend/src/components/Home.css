@@ -1,0 +1,10 @@
+#btn1:hover
+{
+    transform: scale(1.01);
+}
+#btn2:hover
+{
+    background-color: #a5b4fc;
+    color: black;
+    border: solid white 1px;
+}

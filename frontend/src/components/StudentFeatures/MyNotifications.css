@@ -1,0 +1,80 @@
+.notifications-container {
+  padding: 40px 80px;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.notifications-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #1a237e;
+  border-bottom: 3px solid #1a237e;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.notifications-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.notification-item {
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  border-left: 6px solid transparent;
+}
+
+.notification-item:hover {
+  transform: translateY(-3px);
+  background-color: #f1f1f1;
+}
+
+.notification-title {
+  color: #212121;
+  font-weight: 600;
+}
+
+.notification-message {
+  color: #555;
+  font-size: 0.95rem;
+  white-space: pre-line;
+}
+
+.no-notifications {
+  text-align: center;
+  color: gray;
+  margin-top: 50px;
+  font-style: italic;
+}
+
+/* Colored side borders */
+.list-group-item-success {
+  border-left-color: #28a745;
+}
+
+.list-group-item-info {
+  border-left-color: #17a2b8;
+}
+
+.list-group-item-warning {
+  border-left-color: #ffc107;
+}
+
+.list-group-item-primary {
+  border-left-color: #007bff;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
