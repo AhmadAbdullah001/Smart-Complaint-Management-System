@@ -10,6 +10,9 @@ const ComplainRoutes=require('./Routes/ComplainRoutes')
 app.use(express.json())
 app.use('/api/auth',UserRoutes)
 app.use('/api/complain',ComplainRoutes)
+app.get('/',(req,res)=>{
+    res.send("API is running")
+})
 app.listen(process.env.PORT || 5000,()=>{
     console.log("Server is running on port 5000")
 })
