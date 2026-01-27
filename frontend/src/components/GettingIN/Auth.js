@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import Alert from "../Alert";
 import FunctionContext from "../API_Functions/Context";
+import {Link} from 'react-router-dom'
 import "./Auth.css";
 
 function AuthPage() {
@@ -183,9 +184,9 @@ function AuthPage() {
                 </div>
               )}
               {!isSignUp && (
-                <a href="#" className="small text-primary text-decoration-none">
+                <Link href="#" className="small text-primary text-decoration-none">
                   Forgot password?
-                </a>
+                </Link>
               )}
             </div>
 
