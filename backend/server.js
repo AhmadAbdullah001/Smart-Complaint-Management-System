@@ -1,9 +1,15 @@
 const express=require('express')
+const dotenv = require("dotenv");
+dotenv.config();
 const app=express()
 const connectToDB=require('./db')
 const cors=require('cors')
-app.use(cors())
-const dotenv = require("dotenv");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+app.use(express.json())
 connectToDB();
 const UserRoutes=require('./Routes/UserRoutes')
 const ComplainRoutes=require('./Routes/ComplainRoutes')
