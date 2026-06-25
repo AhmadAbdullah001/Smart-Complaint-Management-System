@@ -196,16 +196,29 @@ function AuthPage() {
           </form>
 
           <div className="text-center mt-3">
-            <small>
-              {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
-              <span
-                className="text-primary fw-bold"
-                style={{ cursor: "pointer" }}
-                onClick={() => setIsSignUp(!isSignUp)}
-              >
-                {isSignUp ? "Sign In" : "Sign Up"}
-              </span>
-            </small>
+            {!isSignUp && (
+  <div className="small text-muted mb-2">
+    <div>
+      <b>Student:</b> 23BTCS0035 | Password: 1212
+    </div>
+    <div>
+      <b>Teacher:</b> 23BTCS0001 | Password: 1212
+    </div>
+  </div>
+)}
+
+  <small>
+    {isSignUp
+      ? "Already have an account?"
+      : "Don't have an account?"}{" "}
+    <span
+      className="text-primary fw-bold"
+      style={{ cursor: "pointer" }}
+      onClick={() => setIsSignUp(!isSignUp)}
+    >
+      {isSignUp ? "Sign In" : "Sign Up"}
+    </span>
+  </small>
           </div>
         </div>
       </div>
